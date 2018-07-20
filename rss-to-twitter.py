@@ -1,6 +1,8 @@
 import feedparser
 import datetime
 import twitter
+#You should have python-twitter installed to run this scripts. Run "pip install python-twitter" in your concole.
+#Docs here: https://python-twitter.readthedocs.io/en/latest
 
 api = twitter.Api(consumer_key='Your consumer key',
                  consumer_secret='Your consumer secret', access_token_key='Your access token key',
@@ -17,4 +19,4 @@ for entry in feed.entries[:4]:#iterate through first n entries, in this case —
         article_link = entry.link
         new_status = api.PostUpdate(my_status + article_link)
         i = i+1
-        print('Task completed\n')#For you to know that everything works just fine
+        print('Task completed\n') #For you to know that everything works just fine
