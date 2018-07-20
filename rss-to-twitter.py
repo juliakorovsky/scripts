@@ -11,8 +11,8 @@ api = twitter.Api(consumer_key='Your consumer key',
 today_date = str(datetime.datetime.today().strftime("%a, %d %b %Y")) #you can use another time format if this doesn't suit you
 feed = feedparser.parse('Your rss feed URL')
 i = 0
-text = ['Phrase 1: ', 'Phrase 2: ', 'Phrase 3: '] #There can be many entries a day, in that case use different Tweet statuses for different links
-for entry in feed.entries[:4]:#iterate through first n entries, in this case — 4; you can change this number or remove it completely
+text = ['Phrase 1: ', 'Phrase 2: ', 'Phrase 3: ']  #There can be many entries a day, in that case use different Tweet statuses for different links
+for entry in feed.entries[:4]:  #iterate through first n entries, in this case — 4; you can change this number or remove it completely
     published_date = entry.published
     my_status = text[i]
     if published_date.find(today_date) != -1:
