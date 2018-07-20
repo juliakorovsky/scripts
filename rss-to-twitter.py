@@ -8,7 +8,7 @@ api = twitter.Api(consumer_key='Your consumer key',
                  consumer_secret='Your consumer secret', access_token_key='Your access token key',
                  access_token_secret='Your access token secret')
 
-today_date = str(datetime.datetime.today().strftime("%a, %d %b %Y"))#you can use another time format if this doesn't suit you
+today_date = str(datetime.datetime.today().strftime("%a, %d %b %Y")) #you can use another time format if this doesn't suit you
 feed = feedparser.parse('Your rss feed URL')
 i = 0
 text = ['Phrase 1: ', 'Phrase 2: ', 'Phrase 3: '] #There can be many entries a day, in that case use different Tweet statuses for different links
